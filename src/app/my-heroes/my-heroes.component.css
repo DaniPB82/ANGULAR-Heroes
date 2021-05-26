@@ -1,0 +1,14 @@
+h3 {
+    width: 550px;
+    text-align: center;
+    font-weight: bold;
+}
+
+button {
+    margin: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: rgb(231, 214, 214);
+    width: 120px;
+    height: 120px;
+}
