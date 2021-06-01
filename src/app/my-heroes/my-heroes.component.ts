@@ -1,77 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 
-import { Hero } from '../hero';
+import { Hero, HEROES } from '../hero';
+import { HeroesComponent } from '../hero-details/hero-details.component';
+import { TopHeroesComponent } from '../top-heroes/top-heroes.component';
 
 @Component({
   selector: 'app-my-heroes',
   templateUrl: './my-heroes.component.html',
   styleUrls: ['./my-heroes.component.css']
 })
-export class MyHeroesComponent implements OnInit {
+export class MyHeroesComponent implements OnInit, OnChanges {
 
-  public h1 : Hero = {
-    id: 2,
-    name: "Narco"
-  }
-
-  public h2 : Hero = {
-    id: 3,
-    name: "Bombasto"
-  }
-
-  public h3 : Hero = {
-    id: 4,
-    name: "Celeritas"
-  }
-
-  public h4 : Hero = {
-    id: 5,
-    name: "Magneta"
-  }
-
-  public h5 : Hero = {
-    id: 2,
-    name: "Narco"
-  }
-
-  public h6 : Hero = {
-    id: 3,
-    name: "Bombasto"
-  }
-
-  public h7 : Hero = {
-    id: 4,
-    name: "Celeritas"
-  }
-
-  public h8 : Hero = {
-    id: 5,
-    name: "Magneta"
-  }
-
-  public h9 : Hero = {
-    id: 2,
-    name: "Narco"
-  }
-
-  public h10 : Hero = {
-    id: 3,
-    name: "Bombasto"
-  }
-
-  public h3 : Hero = {
-    id: 4,
-    name: "Celeritas"
-  }
-
-  public h4 : Hero = {
-    id: 5,
-    name: "Magneta"
-  }
+  public selectedHero? : Hero;
+  public title : string = "My Heroes";
+  public listaHeroes : Hero[] = HEROES;
 
   constructor() { }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log("OnChanges PADRE");
+  }
+
   ngOnInit(): void {
+    console.log("OnInit PADRE");
+  }
+
+  
+  onSelect(hero : Hero) : void {
+    this.selectedHero = hero;
+    console.log(this.selectedHero);
   }
 
 }

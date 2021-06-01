@@ -1,41 +1,19 @@
-<h3>{{title}}</h3>
+<app-hero-details [hero] = "selectedHero"></app-hero-details>
+
 <div>
-    <button type="button" class="btn btn-light">{{h1.id}}</button>
-    <button type="button" class="btn btn-light">{{h1.name}}</button>
+    <h3>{{title}}</h3>
 </div>
 <div>
-    <button type="button" class="btn btn-light">{{h2.id}}</button>
-    <button type="button" class="btn btn-light">{{h2.name}}</button>
+    <ul>
+        <li *ngFor="let heroes of listaHeroes" (click)="onSelect(heroes)">
+            <button type="button" class="idButton btn btn-light">{{heroes.id}}</button>
+            <button type="button" class="nameButton btn btn-light">{{heroes.name}}</button>
+        </li>    
+    </ul>
 </div>
-<div>
-    <button type="button" class="btn btn-light">{{h3.id}}</button>
-    <button type="button" class="btn btn-light">{{h3.name}}</button>
+<div *ngIf="selectedHero">
+    <h3>{{selectedHero.name + " is my hero"}}</h3>
+    <button type="button" class="detalles btn btn-light">View Details</button>
 </div>
-<div>
-    <button type="button" class="btn btn-light">{{h4.id}}</button>
-    <button type="button" class="btn btn-light">{{h4.name}}</button>
-</div>
-<div>
-    <button type="button" class="btn btn-light">{{h5.id}}</button>
-    <button type="button" class="btn btn-light">{{h5.name}}</button>
-</div>
-<div>
-    <button type="button" class="btn btn-light">{{h6.id}}</button>
-    <button type="button" class="btn btn-light">{{h6.name}}</button>
-</div>
-<div>
-    <button type="button" class="btn btn-light">{{h7.id}}</button>
-    <button type="button" class="btn btn-light">{{h7.name}}</button>
-</div>
-<div>
-    <button type="button" class="btn btn-light">{{h8.id}}</button>
-    <button type="button" class="btn btn-light">{{h8.name}}</button>
-</div>
-<div>
-    <button type="button" class="btn btn-light">{{h9.id}}</button>
-    <button type="button" class="btn btn-light">{{h9.name}}</button>
-</div>
-<div>
-    <button type="button" class="btn btn-light">{{h10.id}}</button>
-    <button type="button" class="btn btn-light">{{h10.name}}</button>
-</div>
+
+

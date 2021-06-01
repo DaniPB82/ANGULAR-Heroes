@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { MyHeroesComponent } from '../my-heroes/my-heroes.component';
+import { TopHeroesComponent } from '../top-heroes/top-heroes.component';
+
 @Component({
   selector: 'app-cabecera',
   templateUrl: './cabecera.component.html',

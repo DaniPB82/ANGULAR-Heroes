@@ -1,14 +1,43 @@
 h3 {
+    margin-left: 10px;
     width: 550px;
-    text-align: center;
     font-weight: bold;
 }
 
-button {
-    margin: 10px;
+.idButton {
+    margin: 10px 0 10px 0;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: rgb(112, 112, 112);
+    color: white;
+    width: 45px;
+    height: 45px;
+}
+
+.nameButton {
+    margin: 10px 0 10px 0;
     font-family: sans-serif;
     font-weight: bold;
     background-color: rgb(231, 214, 214);
     width: 120px;
-    height: 120px;
+    height: 45px;
+    text-align: left;
+}
+
+li {
+    list-style-type: none;
+    height: 45px;
+    margin: 10px;
+    
+}
+
+.nameButton:hover, .detalles:hover {
+    background-color: lemonchiffon;
+}
+
+.detalles {
+    margin: 10px 0 10px 0;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: rgb(231, 214, 214);
 }

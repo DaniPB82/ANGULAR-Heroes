@@ -28,3 +28,7 @@ button {
     font-weight: bold;
     background-color: rgb(231, 214, 214);
 }
+
+button:hover {
+    background-color: lemonchiffon;
+}
